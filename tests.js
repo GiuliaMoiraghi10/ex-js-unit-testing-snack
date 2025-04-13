@@ -13,8 +13,16 @@ function createSlug(stringa) {
     return stringaMinuscolo
 }
 
+// SNACK 3
+function average(arrayNumeri) {
+    const somma = arrayNumeri.reduce((acc, num) => acc + num, 0) // sommo tutti i numeri dell'array, partendo da 0
+    const media = somma / arrayNumeri.length // divido la somma per il numero di elementi dell'array
+    return media
+}
+
 module.exports = {
     getInitials,
-    createSlug
+    createSlug,
+    average
 }
 

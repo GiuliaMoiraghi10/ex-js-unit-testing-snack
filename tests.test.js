@@ -1,4 +1,4 @@
-const { getInitials, createSlug } = require('./tests.js')
+const { getInitials, createSlug, average } = require('./tests.js')
 
 /* Snack 1
 Creare un test che verifichi la seguente descrizione:
@@ -14,4 +14,11 @@ Creare un test che verifichi la seguente descrizione:
 
 test("La funzione createSlug restituisce una stringa in lowercase.", () => {
     expect(createSlug('Giulia Moiraghi')).toBe('giulia moiraghi')
+})
+
+/* Snack 3
+Creare un test che verifichi la seguente descrizione:
+"La funzione average calcola la media aritmetica di un array di numeri." */
+test("La funzione average calcola la media aritmetica di un array di numeri.", () => {
+    expect(average([2, 4, 6, 8])).toBe(5)
 })
