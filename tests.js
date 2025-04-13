@@ -7,7 +7,14 @@ function getInitials(fullName) {
     return iniziali.toUpperCase() // restituisco le iniziali in maiuscolo
 }
 
+// SNACK 2
+function createSlug(stringa) {
+    const stringaMinuscolo = stringa.toLowerCase() // converto la stringa in minuscolo
+    return stringaMinuscolo
+}
+
 module.exports = {
-    getInitials
+    getInitials,
+    createSlug
 }
 
