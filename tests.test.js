@@ -1,4 +1,4 @@
-const { getInitials, createSlug, average, createSlug2, isPalindrome } = require('./tests.js')
+const { getInitials, createSlug, average, createSlug2, isPalindrome, createSlug3 } = require('./tests.js')
 
 /* Snack 1
 Creare un test che verifichi la seguente descrizione:
@@ -36,3 +36,12 @@ Creare un test che verifichi la seguente descrizione:
 test("La funzione isPalindrome verifica se una stringa è un palindromo.", () => {
     expect(isPalindrome('anna')).toBe(true)
 })
+
+/* Snack 6
+Creare un test che verifichi la seguente descrizione:
+"La funzione createSlug lancia un errore se il titolo è vuoto o non valido." */
+test("La funzione createSlug lancia un errore se il titolo è vuoto o non valido.", () => {
+    expect(() => createSlug3('')).toThrow('titolo vuoto o non valido'); // verifica che venga lanciato un errore
+    expect(() => createSlug3(10)).toThrow('titolo vuoto o non valido'); // verifica che venga lanciato un errore per input non stringa
+    expect(() => createSlug3(null)).toThrow('titolo vuoto o non valido'); // verifica che venga lanciato un errore per input null
+});

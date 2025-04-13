@@ -23,7 +23,7 @@ function average(arrayNumeri) {
 //SNACK 4
 function createSlug2(stringa) {
     const stringaMinuscolo = stringa.toLowerCase() // converto stringa in minuscolo
-    const stringaSenzaSpazi = stringaMinuscolo.replace(/ /g, '-') // sostituisco spazi con -, espressione regolare con il flag g (globale) x cambiarli tutti
+    const stringaSenzaSpazi = stringaMinuscolo.replaceAll(' ', '-') // sostituisco spazi con -
     return stringaSenzaSpazi
 }
 
@@ -33,11 +33,20 @@ function isPalindrome(stringa) {
     return stringa === stringaInvertita // confronto la stringa originale con quella invertita
 }
 
+//SNACK 6
+function createSlug3(stringa) {
+    if (!stringa || typeof stringa !== 'string') { // controllo se la stringa è vuota o non è una stringa
+        throw new Error('titolo vuoto o non valido') // lancio errore
+    }
+    return stringa.toLowerCase().replaceAll(' ', '-') // converto in minuscolo e sostituisco
+}
+
 module.exports = {
     getInitials,
     createSlug,
     average,
     createSlug2,
-    isPalindrome
+    isPalindrome,
+    createSlug3
 }
 
