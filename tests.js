@@ -20,9 +20,17 @@ function average(arrayNumeri) {
     return media
 }
 
+//SNACK 4
+function createSlug2(stringa) {
+    const stringaMinuscolo = stringa.toLowerCase() // converto stringa in minuscolo
+    const stringaSenzaSpazi = stringaMinuscolo.replace(/ /g, '-') // sostituisco spazi con -, espressione regolare con il flag g (globale) x cambiarli tutti
+    return stringaSenzaSpazi
+}
+
 module.exports = {
     getInitials,
     createSlug,
-    average
+    average,
+    createSlug2
 }
 
