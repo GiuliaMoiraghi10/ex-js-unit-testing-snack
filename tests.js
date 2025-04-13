@@ -27,10 +27,17 @@ function createSlug2(stringa) {
     return stringaSenzaSpazi
 }
 
+//SNACK 5
+function isPalindrome(stringa) {
+    const stringaInvertita = stringa.split('').reverse().join('') // divido la stringa in un array di caratteri, inverto l'array e lo unisco in una stringa
+    return stringa === stringaInvertita // confronto la stringa originale con quella invertita
+}
+
 module.exports = {
     getInitials,
     createSlug,
     average,
-    createSlug2
+    createSlug2,
+    isPalindrome
 }
 

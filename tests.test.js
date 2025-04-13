@@ -1,4 +1,4 @@
-const { getInitials, createSlug, average, createSlug2 } = require('./tests.js')
+const { getInitials, createSlug, average, createSlug2, isPalindrome } = require('./tests.js')
 
 /* Snack 1
 Creare un test che verifichi la seguente descrizione:
@@ -28,4 +28,11 @@ Creare un test che verifichi la seguente descrizione:
 "La funzione createSlug sostituisce gli spazi con -." */
 test("La funzione createSlug sostituisce gli spazi con -.", () => {
     expect(createSlug2('Vulpix è bellissima')).toBe('vulpix-è-bellissima')
+})
+
+/* Snack 5
+Creare un test che verifichi la seguente descrizione:
+"La funzione isPalindrome verifica se una stringa è un palindromo." */
+test("La funzione isPalindrome verifica se una stringa è un palindromo.", () => {
+    expect(isPalindrome('anna')).toBe(true)
 })
