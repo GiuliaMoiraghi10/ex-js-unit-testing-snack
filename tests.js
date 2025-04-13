@@ -41,12 +41,26 @@ function createSlug3(stringa) {
     return stringa.toLowerCase().replaceAll(' ', '-') // converto in minuscolo e sostituisco
 }
 
+//SNACK 7
+function findPostById(posts, id) {
+    if (isNaN(id)) { // controllo se id non è un numero
+        throw new Error('id non valido')
+    }
+    posts.forEach(p => {
+        if (p.id === undefined || p.title === undefined || p.slug === undefined) {
+            throw new Error('id non valido, struttura non valida') // controllo se l'oggetto non ha le proprietà giuste
+        }
+    });
+    return posts.find(post => post.id === id) || null
+}
+
 module.exports = {
     getInitials,
     createSlug,
     average,
     createSlug2,
     isPalindrome,
-    createSlug3
+    createSlug3,
+    findPostById
 }
 
